@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>El portafolio de Texas</title>
+
+    <!-- Iconos y fuente -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" />
+
+    <!-- Tu CSS externo -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Maria</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#biografia">Biografía</a>
+            <a href="#desaparecidos">Desaparecidos</a>
+            <a href="#historia">Historia</a>
+            <a href="#final">Final</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="maria.jpg" alt="Victim-1" />
+        </div>
+
+        <div class="home-content">
+            <h1>El diario de <span>Maria</span></h1>
+            <h3 class="typing-text">La única superviviente</h3>
+            <p>
+                La página que está a punto de leer es un relato de la tragedia que ocurrió a un grupo de cinco jóvenes,
+                en particular a María Flores y su hermana, Ana. Es aún más trágico porque eran jóvenes. Pero, aunque hubieran
+                vivido vidas muy largas, no podrían haber esperado, ni habrían deseado, presenciar tanto horror y locura
+                como lo que verían ese día. Para ellos, una apacible tarde de verano se convirtió en una pesadilla. Los eventos
+                de ese día llevarían al descubrimiento de uno de los crímenes más extraños en las fosas de la historia estadounidense:
+                La masacre de Texas.
+            </p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-solid fa-users"></i></a>
+                <a href="#"><i class="fa-solid fa-bone"></i></a>
+                <a href="#"><i class="fa-solid fa-chain"></i></a>
+              <a href="https://youtu.be/Ouw2FePoUR8?si=zsfo5Ud40wcDR_Lg" target="_blank">
+  <i class="fa-solid fa-coffin"></i>
+</a>
+            </div>
+
+            <div class="btn-container">
+                <a href="#" class="btn">Encuéntralos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="biografia" class="content-section">
+        <h2>Biografía de María Flores</h2>
+        <p>María Flores era una estudiante universitaria apasionada por la fotografía. Salía a pasear durante la temporada de flores silvestres con la esperanza de conseguir buenas fotos de brocha india y lupinos, entre otras.
+
+Mientras exploraba, vio una valla con un letrero que decía "Propiedad Privada". Curiosa, la revisó y la encontró cerrada. Lo descartó y continuó, solo para descubrir que el sendero terminaba abruptamente. Se detuvo un rato y decidió tomar fotos. Mientras avanzaba, no pudo evitar oír risas a lo lejos. Sin darle importancia, continuó por el sendero, deteniéndose para fotografiar un campo lleno de flores de Castilleja. Fue en uno de estos fatídicos viajes, durante la temporada de flores silvestres, donde María fue acechada lentamente y finalmente secuestrada por Johnny, el "Pretty Boy". El destino de María es desconocido para el mundo exterior.</p>
+    </section>
+
+    <section id="desaparecidos" class="content-section">
+        <h2>Personas Desaparecidas</h2>
+        <ul>
+            <li><strong>Ana Flores:</strong> Hermana de María.</li>
+            <li><strong>Sonny Williams:</strong> Pareja de Julie.</li>
+            <li><strong>Leland:</strong> Pareja de Ana.</li>
+            <li><strong>Julie:</strong> Amiga.</li>
+            <li><strong>Connie:</strong> Amiga.</li>
+        </ul>
+    </section>
+
+    <section id="historia" class="content-section">
+        <h2>Historia de la Masacre de Texas</h2>
+        <p>La trama va acerca de Ana Flores y sus amigos del colegio, quienes buscan junto a ella por su hermana desaparecida, Maria, cerca de Terlingua Texas. Sin embargo el grupo termina siendo capturado por los mismos captores de Maria Flores, la familia Slaughter, un grupo de maniaticos canibales.</p>
+    </section>
+
+    <section id="final" class="content-section">
+        <h2>El Final y el Legado</h2>
+        <p>Después de los sucesos, María logró sobrevivir y contar su historia. Su testimonio ha sido fundamental para entender los hechos y evitar que se repitan tragedias similares. El legado de aquellos jóvenes permanece vivo en la memoria colectiva.</p>
+    </section>
+
+    <p style="color:transparent;font-size:0.8rem;">Ellos siguen libres</p>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector("nav");
+            nav.classList.toggle("active");
+        }
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const id = link.getAttribute('href').slice(1);
+                const section = document.getElementById(id);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
